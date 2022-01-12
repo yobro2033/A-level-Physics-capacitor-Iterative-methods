@@ -6,6 +6,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
+def dash():
+    return render_template('iterative.html')
+
+@app.route('/search')
 def home():
     capacitor = request.form['capacitor']
     voltage = request.form['voltage']
@@ -17,16 +21,6 @@ def home():
     t = 0
     finalCharge = initialCharge
     attempt = 0
-
-#capacitor = float(input("Please enter capacitance (e.g 1500 or 0.00025): "))
-#voltage = float(input("Please enter voltage (e.g 1500 or 0.00025): "))
-#resistance = float(input("Please enter resistance (e.g 1500 or 0.00025): "))
-#timeInterval  = float(input("Please enter time interval (e.g 1 or 0.25): "))
-#numberLoop = int(input("How many time(s) you want to iterate? (e.g 5 or 20) "))
-#initialCharge = capacitor*voltage
-#t = 0
-#finalCharge = initialCharge
-#attempt = 0
 
     data = []
     while attempt < numberLoop+1:
