@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<p><a href="http://127.0.0.1:5000/"><img src="/static/image/footer-logo.png" alt="logo" width=120 length=48 ></a></p>
+<div class="modal-content animate">
+   <div class="container">
+      <h2 style="text-align:center">Welcome to Itertative method!</h2>
+      <br>
+      <form action="/search" method="post">
+         <div style="text-align:center">
+           <label for="capacitor">Please enter capacitance (e.g 1500 or 0.00025): </label>
+           <input type="text" name="capacitor" required><br>
+           <label for="voltage">Please enter voltage (e.g 1500 or 0.00025): </label>
+           <input type="text" name="voltage" required><br>
+           <label for="resistance">Please enter resistance (e.g 1500 or 0.00025): </label>
+           <input type="text" name="resistance" required><br>
+           <label for="timeInterval">Please enter time interval (e.g 1 or 0.25): </label>
+           <input type="text" name="timeInterval" required><br>
+           <label for="numberLoop">How many time(s) you want to iterate? (e.g 5 or 20) </label>
+           <input type="text" name="numberLoop" required><br>
+           <button type="submit" style="text-align:center">Search</button>
+         </div>
+      </form>
+   </div>
+</div>
+{% endblock %}
