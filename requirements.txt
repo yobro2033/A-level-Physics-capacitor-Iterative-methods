@@ -2,4 +2,4 @@ gunicorn
 Flask
 numpy
 columnar
-matplotlib
+pyplot
