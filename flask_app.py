@@ -59,3 +59,5 @@ def home():
     x,y = mpltData.T
     plt.scatter(x,y)
     plt.show()
+    
+    return table
