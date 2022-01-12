@@ -12,6 +12,7 @@ initialCharge = capacitor*voltage
 t = 0
 finalCharge = initialCharge
 attempt = 0
+
 print("\n------------Iterative Table------------")
 data = []
 while attempt < numberLoop+1:
