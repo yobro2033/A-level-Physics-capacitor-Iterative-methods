@@ -12,10 +12,15 @@ def dash():
 @app.route('/search', methods=['POST', 'GET'])
 def home():
     capacitor = request.form['capacitor']
+    capacitor = float(capacitor)
     voltage = request.form['voltage']
+    voltage = float(voltage)
     resistance = request.form['resistance']
+    resistance = float(resistance)
     timeInterval = request.form['timeInterval']
+    timeInterval = float(timeInterval)
     numberLoop = request.form['numberLoop']
+    numberLoop = int(numberLoop)
     
     initialCharge = capacitor*voltage
     t = 0
