@@ -9,7 +9,7 @@ app = Flask(__name__)
 def dash():
     return render_template('iterative.html')
 
-@app.route('/search')
+@app.route('/search', methods=['POST', 'GET'])
 def home():
     capacitor = request.form['capacitor']
     voltage = request.form['voltage']
