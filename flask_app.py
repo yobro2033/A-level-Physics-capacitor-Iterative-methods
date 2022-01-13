@@ -33,7 +33,7 @@ def home():
     data1 = []
     while attempt < numberLoop+1:
         #Variable
-        tprint = t
+        tprint = round(t,2)
         current = finalCharge / (capacitor*resistance)
         #Variable
         currentprint = round(current,6)
