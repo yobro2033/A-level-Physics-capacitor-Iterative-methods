@@ -2,6 +2,7 @@ from columnar import columnar
 import numpy as np
 from matplotlib import pyplot as plt
 from flask import Flask, render_template, request
+import base64
 
 app = Flask(__name__)
 
@@ -28,6 +29,7 @@ def home():
     attempt = 0
 
     data = []
+    data1 = []
     while attempt < numberLoop+1:
         #Variable
         tprint = t
@@ -40,14 +42,11 @@ def home():
         charge = current*timeInterval
         #Variable
         chargeprint = round(charge,6)
+        data1.append({'tprint': tprint, 'initialChargeprint': initialChargeprint, 'currentprint': currentprint, 'chargeprint': chargeprint})
         data.append([tprint,initialChargeprint,currentprint,chargeprint])
         finalCharge = initialCharge - charge
         initialCharge = finalCharge
         attempt = attempt + 1
-
-    headers = ['t','Q','I','ΔQ']
-    table = columnar(data, headers, no_borders=True)
-    print(table)
 
     graphData = []
     for dat in data:
@@ -56,8 +55,12 @@ def home():
         graphData.append([chargeGraph,timeGraph])
 
     mpltData = np.array(graphData)
+    img = io.BytesIO()
     x,y = mpltData.T
     plt.scatter(x,y)
-    plt.show()
+    plt.savefig(img, format='png')
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode()
     
-    return table
+    
+    return render_template("result.html", data1=data1, imagen={ 'imagen': plot_url })
