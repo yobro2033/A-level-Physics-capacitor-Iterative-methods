@@ -22,7 +22,7 @@ option {
 input[type=text],
 input[type=password] {
 	border-radius: 10px;
-	width: 30%;
+	width: 10%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -58,7 +58,7 @@ button {
 	margin: 0 auto;
 	border: none;
 	cursor: pointer;
-	width: 120px;
+	width: 90px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 input [type=checkbox] {
