@@ -3,6 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from flask import Flask, render_template, request
 import base64
+import io 
 
 app = Flask(__name__)
 
