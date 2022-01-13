@@ -39,10 +39,10 @@ def home():
         currentprint = round(current,6)
         t = t + timeInterval
         #Variable
-        initialChargeprint = round(initialCharge,6)
+        initialChargeprint = round(initialCharge,7)
         charge = current*timeInterval
         #Variable
-        chargeprint = round(charge,6)
+        chargeprint = round(charge,10)
         data1.append({'tprint': tprint, 'initialChargeprint': initialChargeprint, 'currentprint': currentprint, 'chargeprint': chargeprint})
         data.append([tprint,initialChargeprint,currentprint,chargeprint])
         finalCharge = initialCharge - charge
