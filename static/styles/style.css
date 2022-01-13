@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(-45deg, #f4cccc, #f9b9b9, #eab1b1, #ef8787, #d68d8d);
+	background: linear-gradient(-45deg, #f8f8f8);
 	background-size: 400% 400%;
 	position: relative;
 	font-family: 'Courier New';
@@ -22,7 +22,7 @@ option {
 input[type=text],
 input[type=password] {
 	border-radius: 10px;
-	width: 100%;
+	width: 30%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -32,7 +32,7 @@ input[type=password] {
 div[class=card] {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 16px;
-	background-color: #F8F8F8;
+	background-color: #9de1f6;
 	max-width: 350px;
 	margin: auto;
 	text-align: center;
