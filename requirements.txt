@@ -4,3 +4,4 @@ numpy
 columnar
 matplotlib
 io
+base64
