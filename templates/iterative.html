@@ -3,24 +3,20 @@
 <p><a href="https://viet-iterative-methods.herokuapp.com/"><img src="/static/image/footer-logo.png" alt="logo" width=160 length=64 ></a></p>
 <div class="modal-content animate">
    <div class="container">
-      <h2 style="text-align:center">Dynamic programming problem solver</h2>
+      <h2 style="text-align:center">Itertative method calculator</h2>
       <br>
       <form action="/search" method="post">
          <div style="text-align:center">
-           <label for="additionalCost">Please enter your additional cost: </label>
-           <input type="text" name="additionalCost" required><br>
-           <label for="overheadCost">Please enter your overhead cost: </label>
-           <input type="text" name="overheadCost" required><br>
-           <label for="storageCost">Please enter your storage cost: </label>
-           <input type="text" name="storageCost" required><br>
-           <label for="aboveAdditional">Above which value to require additional cost? </label>
-           <input type="text" name="aboveAdditional" required><br>
-           <label for="availableMax">Please enter maxium 'items' available: </label>
-           <input type="text" name="availableMax" required><br>
-           <label for="toMakeMax">Please enter maxium 'items' can be made: </label>
-           <input type="text" name="toMakeMax" required><br>
-           <label for="input_string">Please enter number of item demanded (Each separated by space): </label>
-           <input type="text" name="input_string" required><br>
+           <label for="capacitor">Please enter capacitance (e.g 1500 or 0.00025): </label>
+           <input type="text" name="capacitor" required><br>
+           <label for="voltage">Please enter voltage (e.g 1500 or 0.00025): </label>
+           <input type="text" name="voltage" required><br>
+           <label for="resistance">Please enter resistance (e.g 1500 or 0.00025): </label>
+           <input type="text" name="resistance" required><br>
+           <label for="timeInterval">Please enter time interval (e.g 1 or 0.25): </label>
+           <input type="text" name="timeInterval" required><br>
+           <label for="numberLoop">How many times you want to iterate? (e.g 5 or 20) </label>
+           <input type="text" name="numberLoop" required><br>
            <br>
            <button type="submit" style="text-align:center">Enter</button>
          </div>
